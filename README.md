@@ -1,5 +1,7 @@
 # Introduction
 
+    In this project, you'll find my solutions to this workshop.
+
 Reason is a language that looks and reads like Javascript, writes like Javascript, and even interops nicely with Javascript. But it is in fact a new syntax for OCaml, a powerful statically typed functional programming language. 
 
 The syntax makes ReasonML easy to start playing with, but unless you already know a typed functional language, you will soon run into stumbling blocks because of unfamiliarity with static types and functional programming. 
