@@ -43,9 +43,15 @@ let divide = (~dividend, ~divisor) => dividend / divisor;
   Now implement [modulo(~dividend, ~divisor)] using our version of divide with
   labelled arguments (e.g. [modulo(~dividend:7, ~divisor:2)] should equal 1)
  */
-let modulo = (~dividend, ~divisor) => failwith("For you to implement");
+let rec modulo = (~dividend, ~divisor) =>
+  if (dividend > divisor) {
+    modulo(~dividend=dividend - divide(~dividend, ~divisor) * divisor, ~divisor)
+  } else {
+    dividend
+  };
 
 Test.runAll([
+  (modulo(~dividend=7, ~divisor=2) == 1, "modulo"),
   (modulo(~dividend=17, ~divisor=5) == 2, "modulo"),
   (modulo(~dividend=99, ~divisor=9) == 0, "modulo"),
 ]);
